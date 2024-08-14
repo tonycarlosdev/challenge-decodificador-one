@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFFAF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.logo {
+  margin-left: 70px;
+  padding-top: 20px;
+  width: 2%;
+}
+main {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: 80px;
+}
+.text-area {
+  border: none;
+  color: #03346E;
+  margin-top: 90px;
+  text-transform: lowercase;
+}
+::placeholder { 
+  color: #03346E;
+  text-transform: none;
+  font-weight: 500;
+}
+.text-area:focus {
+  outline: none;
+}
+.mensagem {
+  background: #FFF7F1;
+  background-image: url(/imgs/crypto.svg);
+  border: none;
+  border-radius: 24px;
+  color: #03346E;
+  font-weight: 500;
+  margin-left: 98px;
+  margin-top: 20px;
+  padding: 60px 10px 0 20px;
+  position: fixed;
+}
+.mensagem:focus {
+  outline: none;
+}
+.btns {
+  display: flex;
+  margin-top: 50px;
+}
+.btn-criptografar {
+  background-color: #5A72A0;
+  border: 1px solid #5A72A0;
+  border-radius: 24px;
+  color: #FFF7F1;
+  cursor: pointer;
+  height: 67px;
+  width: 328px;
+}
+.btn-criptografar:hover {
+  background-color: #FFF7F1;
+  color: #03346E;
+  transition: 0.3s;
+}
+.btn-descriptografar {
+  background: #FFF7F1;
+  border: 1px solid #5A72A0;
+  border-radius: 24px;
+  color: #03346E;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 30px;
+  width: 328px;
+}
+.btn-descriptografar:hover {
+  background-color: #5A72A0;
+  color: #FFF7F1;
+  transition: 0.3s;
+}
+.btn-copiar {
+  border: 1px solid #5A72A0;
+  border-radius: 24px;
+  color: #03346E;
+  cursor: pointer;
+  height: 67px;
+  margin-left: 155px;
+  margin-top: 472px;
+  position: absolute;
+  width: 336px;
+}
+.btn-copiar:hover {
+  background-color: #5A72A0;
+  color: #FDFFE2;
+  transition: 0.3s;
+}
+.informacao {
+  padding-top: 100px;
+} 
+h6 {
+  color: #03346E;
+  font-size: 18px;
+}
+span {
+  background-color: #03346E;
+  border-radius: 50%;
+  color: #FFF7F1;
+  padding: 2px 11px;
+  font-size: 18px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  margin-top: 10%;
+  color: #03346E;
+  font-weight: 900;
+}
+
+@media(max-width:1600px) {
+  footer {
+    margin-top: 16%;
+  }
+}
+
+@media(max-width:770px) {
+  .logo {
+    width: 4%;
+    margin-left: 5%;
+  }  
+  main {
+    flex-direction: column;
+    margin-left: 5.5%;
+  }
+  
+  .mensagem {
+    height: 300px;
+    margin-left: 17%;
+    margin-top: 10%;
+    position: relative;
+    padding: 15px 15px 0 15px;
+  }
+  .btn-copiar {
+    margin-left: -51%;
+    margin-top: 38%;
+  }
+  footer {
+    margin-top: 12%;
+  }
+  .dev {
+    font-size: .9rem;
+    font-weight: 500;
+  }  
+}
+
+@media(max-width: 375px) {
+  .logo {
+    width: 6%;
+    margin-left: 6%;
+  }
+  .text-area {
+    margin-top: 4%;
+    height: 50px;
+  }
+  .informacao {
+    margin-top: 10%;
+  }
+  ::placeholder {
+    font-size: .9rem;
+  }
+  h6 {
+    font-size: .4rem;
+  }
+  span {
+    font-size: .4rem;
+    padding: 1px 7px;
+  }
+  .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-criptografar, .btn-descriptografar {
+    margin: 2%;
+    height: 50px;
+    width: 220px;
+    font-size: .7rem;
+  }
+  .mensagem {
+    display: flex;
+    margin-left: 4%;
+    width: 270px;
+    height: 250px;    
+  }
+  .btn-copiar {
+    height: 50px;
+    width: 210px;
+    font-size: .7rem;
+    margin-top: -70px;
+    margin-left: 15%;
+  }
+  .dev {
+    margin-top: auto;
+    font-size: .5rem;
+  }
+}

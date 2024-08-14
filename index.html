@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Challenge ONE</title>
+</head>
+<body>
+  <header>
+    <img class="logo" src="/imgs/logoAlura.svg" alt="Logo da Alura">
+  </header>
+  <main>
+    <section>
+      <textarea class="text-area" cols="41" rows="4" placeholder="Digite o texto"></textarea>
+      <div class="informacao">
+        <h6> <span>!</span> Apenas letras minúsculas e sem acento.</h6>
+      </div>
+      <div class="btns">
+        <button class="btn-criptografar" onclick="btnCriptografar()">Criptografar</button>
+        <button class="btn-descriptografar" onclick="btnDescriptografar()">Descriptografar</button>
+      </div>
+    </section>
+    <section>
+      <textarea class="mensagem" cols="25" rows="11"></textarea>
+      <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+    </section>
+  </main>
+  <footer><p class="dev">Desenvolvido por Tony Carlos.</p></footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>
