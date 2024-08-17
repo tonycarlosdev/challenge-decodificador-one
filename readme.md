@@ -27,5 +27,5 @@ Este projeto foi desenvolvido como parte do programa ONE em conjunto com a Alura
 
 ## Links para acessar o Projeto
 
-- **Github Pages: https://tonycarlosdev.github.io/challenge-decodificador-one/ 
-- **Vercel: https://challenge-decodificador-one-delta.vercel.app/
+- **Github** Pages: https://tonycarlosdev.github.io/challenge-decodificador-one/ 
+- **Vercel**: https://challenge-decodificador-one-delta.vercel.app/
