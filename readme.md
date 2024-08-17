@@ -25,3 +25,7 @@ Este projeto foi desenvolvido como parte do programa ONE em conjunto com a Alura
 - **CSS3**: Estilização e layout da interface.
 - **JavaScript**: Lógica de codificação e decodificação.
 
+## Links para acessar o Projeto
+
+- **Github Pages: https://tonycarlosdev.github.io/challenge-decodificador-one/ 
+- **Vercel: https://challenge-decodificador-one-delta.vercel.app/
