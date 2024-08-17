@@ -44,7 +44,7 @@ main {
   margin-left: 98px;
   margin-top: 20px;
   padding: 60px 10px 0 20px;
-  position: fixed;
+  position: relative;
 }
 .mensagem:focus {
   outline: none;
@@ -89,7 +89,7 @@ main {
   cursor: pointer;
   height: 67px;
   margin-left: 155px;
-  margin-top: 472px;
+  margin-top: -150px;
   position: absolute;
   width: 336px;
 }
@@ -115,95 +115,99 @@ span {
 }
 footer {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
   color: #03346E;
   font-weight: 900;
 }
 
-@media(max-width:1600px) {
-  footer {
-    margin-top: 16%;
-  }
-}
-
-@media(max-width:770px) {
-  .logo {
-    width: 4%;
-    margin-left: 5%;
-  }  
+@media(max-width:1200px) {
   main {
-    flex-direction: column;
-    margin-left: 5.5%;
-  }
-  
-  .mensagem {
-    height: 300px;
-    margin-left: 17%;
-    margin-top: 10%;
-    position: relative;
-    padding: 15px 15px 0 15px;
-  }
-  .btn-copiar {
-    margin-left: -51%;
-    margin-top: 38%;
-  }
-  footer {
-    margin-top: 12%;
-  }
-  .dev {
-    font-size: .9rem;
-    font-weight: 500;
-  }  
-}
-
-@media(max-width: 375px) {
-  .logo {
-    width: 6%;
-    margin-left: 6%;
-  }
-  .text-area {
-    margin-top: 4%;
-    height: 50px;
-  }
-  .informacao {
-    margin-top: 10%;
-  }
-  ::placeholder {
-    font-size: .9rem;
-  }
-  h6 {
-    font-size: .4rem;
-  }
-  span {
-    font-size: .4rem;
-    padding: 1px 7px;
-  }
-  .btns {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .btn-criptografar, .btn-descriptografar {
-    margin: 2%;
-    height: 50px;
-    width: 220px;
-    font-size: .7rem;
+  .logo {
+    display: flex;
+    margin: 20px 0 0 60px; 
+    width: 40px; 
+  }
+  .btns {
+    margin-left: -60px;
+  }
+
+  .container-descriptografar { 
+    margin-top: 100px;
+    margin-left: -80px;
+    padding-right: 100px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .btn-copiar {
+    margin-top: -120px;
+  }
+  footer {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+@media(max-width: 480px) {
+  .logo {
+    margin-left: 40px;
+    width: 30px;
+  }
+  .text-area {
+    font-size: 24px;
+    margin-left: -60px;
+    width: 400px;
+    height: 200px;
+  }
+  h6 {
+    margin-left: -30px;
+    font-size: 14px;
+    margin-bottom: -30px;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .btn-criptografar {
+    margin-left: 30px;
   }
   .mensagem {
-    display: flex;
-    margin-left: 4%;
-    width: 270px;
-    height: 250px;    
-  }
-  .btn-copiar {
-    height: 50px;
-    width: 210px;
-    font-size: .7rem;
-    margin-top: -70px;
-    margin-left: 15%;
+    height: 400px;
   }
   .dev {
-    margin-top: auto;
-    font-size: .5rem;
+    font-size: 24px;
+  }
+}
+@media(max-width: 375px) {
+  .text-area {
+    width: 290px;
+  }
+  h6 {
+    font-size: 12px;
+  }
+  .btn-criptografar, .btn-descriptografar {
+    font-size: 24px;
+    height: 47px;
+    width: 228px;
+  }
+  .informacao {
+    margin-left: -30px;
+  }
+  .mensagem {
+    width: 250px;
+    height: 400px;
+    margin-top: -40px;
+  }
+  .btn-copiar {
+    margin-left: 125px;
+    height: 47px;
+    width: 228px;
+  }
+  .dev {
+    font-size: 18px;
   }
 }
