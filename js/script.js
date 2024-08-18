@@ -59,5 +59,7 @@ function copiarTexto() {
   mensagem.select();
   mensagem.setSelectionRange(0,99999);
   document.execCommand("copy");
+  mensagem.value = "";
+
   
 }
