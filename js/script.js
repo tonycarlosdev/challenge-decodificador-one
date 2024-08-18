@@ -55,6 +55,7 @@ function descriptografar(stringDescriptada) {
 }
 
 function copiarTexto() {
+  textArea.value = mensagem.value;
   mensagem.select();
   mensagem.setSelectionRange(0,99999);
   document.execCommand("copy");
