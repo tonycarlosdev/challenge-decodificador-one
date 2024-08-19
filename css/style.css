@@ -119,6 +119,9 @@ footer {
   color: #03346E;
   font-weight: 900;
 }
+.error-message {
+  color: #ff0000;
+}
 
 @media(max-width:1200px) {
   main {

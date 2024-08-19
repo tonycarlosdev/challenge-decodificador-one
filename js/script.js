@@ -8,11 +8,11 @@ function validateInput(input) {
 
 function btnCriptografar() {
   if (textArea.value.trim() === "") {
-    alert("Por favor, digite um texto para criptografar.");
+    showError("Por favor, digite um texto para criptografar.");
     return;
   }
   if (!validateInput(textArea.value)) {
-    alert("Entrada inválida. Use apenas letras minúsculas, números e pontuação básica.");
+    showError("Entrada inválida. Use apenas letras minúsculas, números e pontuação básica.");
     return;
   }
   const textoEncriptado = criptografar(textArea.value);
@@ -33,11 +33,11 @@ function criptografar(stringEncriptada) {
 
 function btnDescriptografar() {
   if (textArea.value.trim() === "") {
-    alert("Por favor, digite ou cole o texto copiado para descriptografar.");
+    showError("Por favor, digite ou cole o texto copiado para descriptografar.");
     return;
   }
   if (!validateInput(textArea.value)) {
-    alert("Entrada inválida. Use apenas letras minúsculas, números e pontuação básica.");
+    showError("Entrada inválida. Use apenas letras minúsculas, números e pontuação básica.");
     return;
   }
   const textoDescriptado = descriptografar(textArea.value);
@@ -60,6 +60,21 @@ function copiarTexto() {
   mensagem.setSelectionRange(0,99999);
   document.execCommand("copy");
   mensagem.value = "";
-
-  
+  clearError();  
 }
+
+function showError(message) {
+  textArea.value = message;
+  textArea.classList.add("error-message");
+}
+
+function clearError() {
+  textArea.classList.remove("error-message");
+}
+
+textArea.addEventListener("focus", function() {
+  if (textArea.classList.contains("error-message")) {
+    textArea.value = "";
+    clearError();
+  }
+});
