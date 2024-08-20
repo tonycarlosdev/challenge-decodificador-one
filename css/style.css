@@ -17,6 +17,7 @@
 }
 main {
   display: flex;
+  justify-content: space-around;
   margin-bottom: 50px;
   margin-left: 80px;
 }
@@ -24,6 +25,7 @@ main {
   border: none;
   color: #03346E;
   margin-top: 90px;
+  resize: none;
   text-transform: lowercase;
 }
 ::placeholder { 
