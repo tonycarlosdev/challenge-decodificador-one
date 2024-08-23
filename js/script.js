@@ -16,8 +16,9 @@ function btnCriptografar() {
     return;
   }
   const textoEncriptado = criptografar(textArea.value);
-  mensagem.value = textoEncriptado;
   textArea.value = "";
+  clearError();
+  mostrarTextoGradualmente(textoEncriptado);
 }
 
 function criptografar(stringEncriptada) {
@@ -41,7 +42,9 @@ function btnDescriptografar() {
     return;
   }
   const textoDescriptado = descriptografar(textArea.value);
-  mensagem.value = textoDescriptado;
+  textArea.value = "";
+  clearError();
+  mostrarTextoGradualmente(textoDescriptado);
 }
 
 function descriptografar(stringDescriptada) {
@@ -78,3 +81,15 @@ textArea.addEventListener("focus", function() {
     clearError();
   }
 });
+
+function mostrarTextoGradualmente(texto) {
+  mensagem.value = ""; // Limpa o campo mensagem
+  let i = 0;
+  const intervalo = setInterval(() => {
+    mensagem.value += texto[i];
+    i++;
+    if (i >= texto.length) {
+      clearInterval(intervalo); // Para o intervalo quando todo o texto for exibido
+    }
+  }, 100); // Ajuste o tempo (em milissegundos) para controlar a velocidade do efeito
+}
