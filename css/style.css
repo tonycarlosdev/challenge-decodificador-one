@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --background: #232931;
+  --texto-primario: #EEE;
+  --verde: #4ECCA3;
+  --texto-cinza: #393E46;
+  --aviso-error: #B43F3F;
+}
+
 * {
   margin: 0;
   padding: 0;
-  background-color: #FAFFAF;
+  background-color: var(--background);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 32px;
@@ -23,13 +31,13 @@ main {
 }
 .text-area {
   border: none;
-  color: #03346E;
+  color: var(--texto-primario);
   margin-top: 90px;
   resize: none;
   text-transform: lowercase;
 }
 ::placeholder { 
-  color: #03346E;
+  color: var(--texto-primario);
   text-transform: none;
   font-weight: 500;
 }
@@ -37,16 +45,17 @@ main {
   outline: none;
 }
 .mensagem {
-  background: #FFF7F1;
+  background: var(--verde);
   background-image: url(/imgs/crypto.svg);
   border: none;
   border-radius: 24px;
-  color: #03346E;
+  color: var(--background);
   font-weight: 500;
   margin-left: 98px;
   margin-top: 20px;
   padding: 60px 10px 0 20px;
   position: relative;
+  resize: none;
 }
 .mensagem:focus {
   outline: none;
@@ -56,39 +65,45 @@ main {
   margin-top: 50px;
 }
 .btn-criptografar {
-  background-color: #5A72A0;
-  border: 1px solid #5A72A0;
+  background-color: var(--verde);
+  border: 1px solid var(--verde);
   border-radius: 24px;
-  color: #FFF7F1;
+  color: var(--texto-primario);
   cursor: pointer;
+  font-weight: bold;
   height: 67px;
   width: 328px;
 }
 .btn-criptografar:hover {
-  background-color: #FFF7F1;
-  color: #03346E;
+  background-color: var(--texto-primario);
+  border: 1px solid var(--texto-primario);
+  color: var(--texto-cinza);
   transition: 0.3s;
 }
 .btn-descriptografar {
-  background: #FFF7F1;
-  border: 1px solid #5A72A0;
+  background: var(--texto-primario);
+  border: 1px solid var(--texto-primario);
   border-radius: 24px;
-  color: #03346E;
+  color: var(--texto-cinza);
   cursor: pointer;
+  font-weight: bold;
   height: 67px;
   margin-left: 30px;
   width: 328px;
 }
 .btn-descriptografar:hover {
-  background-color: #5A72A0;
-  color: #FFF7F1;
+  background-color: var(--verde);
+  border: 1px solid var(--verde);
+  color: var(--texto-primario);
   transition: 0.3s;
 }
 .btn-copiar {
-  border: 1px solid #5A72A0;
+  background-color: var(--texto-primario);
+  border: 1px solid var(--texto-primario);
   border-radius: 24px;
-  color: #03346E;
+  color: var(--texto-cinza);
   cursor: pointer;
+  font-weight: bold;
   height: 67px;
   margin-left: 155px;
   margin-top: -150px;
@@ -96,33 +111,38 @@ main {
   width: 336px;
 }
 .btn-copiar:hover {
-  background-color: #5A72A0;
-  color: #FDFFE2;
+  background-color: var(--texto-cinza);
+  border: var(--texto-cinza);
+  color: var(--texto-primario);
   transition: 0.3s;
 }
 .informacao {
   padding-top: 100px;
 } 
 h6 {
-  color: #03346E;
+  color: var(--texto-primario);
   font-size: 18px;
 }
-span {
-  background-color: #03346E;
+.aviso {
+  background-color: var(--aviso-error);
   border-radius: 50%;
-  color: #FFF7F1;
+  color: var(--background);
   padding: 2px 11px;
   font-size: 18px;
   font-weight: bold;
 }
-footer {
+.dev {
   text-align: center;
   margin-top: 5%;
-  color: #03346E;
-  font-weight: 900;
+  color: var(--texto-primario);
+  font-weight: bold;
+}
+.nomeDev {
+  color: var(--verde);
+  font-weight: bold;
 }
 .error-message {
-  color: #ff0000;
+  color: var(--aviso-error);
 }
 
 @media(max-width:1200px) {
@@ -150,11 +170,14 @@ footer {
   .btn-copiar {
     margin-top: -120px;
   }
+
   footer {
     display: flex;
     margin-bottom: 30px;
     justify-content: center;
   }
+  
+  
 }
 @media(max-width: 480px) {
   .logo {

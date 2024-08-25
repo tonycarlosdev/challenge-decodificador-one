@@ -34,7 +34,7 @@ function criptografar(stringEncriptada) {
 
 function btnDescriptografar() {
   if (textArea.value.trim() === "") {
-    showError("Por favor, digite ou cole o texto copiado para descriptografar.");
+    showError("Por favor, após criptografar o texto clique no botão Copiar para depois descriptografar."); // clique no botão copiar o texto criptografado para 
     return;
   }
   if (!validateInput(textArea.value)) {
@@ -91,5 +91,5 @@ function mostrarTextoGradualmente(texto) {
     if (i >= texto.length) {
       clearInterval(intervalo); // Para o intervalo quando todo o texto for exibido
     }
-  }, 100); // Ajuste o tempo (em milissegundos) para controlar a velocidade do efeito
+  }, 50); // Ajuste o tempo (em milissegundos) para controlar a velocidade do efeito
 }
